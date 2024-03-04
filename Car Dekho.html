@@ -1,0 +1,523 @@
+<html>
+	<head>
+		<script src="wow.js"></script>
+		<script src="wow2.js"></script>
+		<link rel="stylesheet" href="animate.css" />
+		<title>Car Dekho: New Cars, Cars Prices</title>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+		<style>
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+             }
+			
+			.header { display: flex; 
+			       font-size: 11px;
+				   font-family: 'Inter', sans-serif;
+				   font-weight: 400;
+			          padding: 13px 0px 0px; }
+			.logo { margin: 0px 170px 0px 105px; }
+		    .logo img { height: 42px;
+			             width: 174px; }
+			.search  { margin-top: 0px; }
+			.search input { height: 45px;
+			                background-color: rgba(0,0,0,.05);
+			                 width: 470px;
+							 border-color: rgba(0,0,0,.05);
+							 border-radius: 4px;
+							 font-size: 14px;
+				   font-family: 'Inter', sans-serif;
+				   font-weight: 500;
+							 }
+			.search button { margin-left: -40px;
+                             height: 45px;
+							 width: 70px;
+							 color: white;
+							 border-radius: 0px 3px 3px 0px;
+							 background-color: black;
+							
+							}
+			.lang { margin: 15px 10px 0px 150px;
+					height: 45px;
+					width: 55px;
+					border-width: 0px;
+					text-decoration: underline;
+				  }
+		    .heart, .login { margin: 15px 0px 0px 40px;
+			                font-size: 14px;
+							
+			          }
+		    .menu { display: flex;
+					justify-content: space-evenly;
+			        padding: 0px 100px 15px 70px;
+			        border: 1px solid rgba(0,0,0,.05);    
+						}
+			.new { font-size: 14px;
+				   font-family: 'Inter', sans-serif;
+				   font-weight: 600;
+				   color: rgba(0,0,0,0.78);
+				   padding-top: 15px;
+         			}
+					.new:hover {
+					border-top:3px solid orange;
+					}
+			<!-- .new:hover { content: ''; -->
+                         <!-- height: 0px; -->
+						 <!-- margin-top: -10px; -->
+					     <!-- background-color:orange; -->
+					     <!-- width: 150px; } -->
+			.loc { margin-left: 220px;
+			       padding-top: 15px;
+      			   }
+			.maruti { padding : 0px 15px; }
+			.bgimg img { height: 548px;
+			             width: 1450px; }
+			.bgimg { position: relative; }
+			.form { position: absolute;
+			        top:170px;
+					display: flex;
+					flex-direction: column;
+					padding: 10px 20px 10px 20px;
+					background-color:white;
+					left: 100px;
+					border-color: rgba(0,0,0,.7);
+					border-radius: 10px;
+			              }
+		    .form h1 { font-size: 30px; 
+			           font-family: 'Inter', sans-serif;
+				       font-weight: 700;
+					   margin-top: 10px;
+					   margin-bottom: 20px;
+					  }
+			.formbut button { height: 50px;
+			                   width: 150px;
+                               margin-bottom: 15px;
+                         	   }
+		    .butblack { height: 50px;
+			                   width: 150px;
+                               margin-bottom: 15px;
+							   color:white;
+							   background-color: black;
+                         	   }
+		    .grey { color: rgba(0,0,0,.7); 
+			       font-size: 13px; 
+				   font-weight: 500;
+			       font-family: 'Inter', sans-serif;
+				   }
+		    .grey2 { color: rgba(0,0,0,.7); 
+			       font-size: 15px; 
+				   font-weight: 500;
+			       font-family: 'Inter', sans-serif;
+				   }
+		    .radio { margin-bottom: 15px; }
+			.rad { 
+			       position:relative; 
+				   top:10px;
+				   left:15px;
+				   margin: 10px 0px;				   
+					 }
+			.rad span { margin: 20px; }
+			.rad input  { display: none; 
+						   }
+			.rad span:before { content: '';
+			                   height: 20px;
+							   width: 20px;
+							   border-radius: 50%;
+							   background-color: white;
+							   border: 1px solid grey;
+							   position: absolute;
+							   top: -1px;
+							   left: -8px;
+							  
+							   }
+		    .rad span:after { content: '';
+			                   height: 6px;
+							   width: 6px;
+							   border-radius: 50%;
+							   background-color: white;
+							   border: 1px solid white;
+							   position: absolute;
+							   top: 5.5px;
+							   left: -0.5px;
+							   }
+		    .rad input:checked + span:before {  background-color: white; 
+			                                    display: block; 
+												border-color: orange;
+													}
+		    .rad input:checked + span:after { background-color: orange;
+												display: block;
+												border-color: orange;
+                                       			}
+			.rad input:checked + span { color:orange }
+			.select1 { height: 50px;
+			        width: 320px;
+					margin-top: 20px; }
+			.select2 { height: 50px;
+			        width: 320px;
+					 }
+			.sea button { height: 50px;
+			        width: 320px;
+					color:white;
+					background-color: #f75d34;
+					border-radius: 5px;
+					border-color: #f75d34;
+					margin-top: 25px; }
+			.adsea { text-align: right;
+                     margin: 35px 0px 25px;
+         			  }
+		    .carbut { display: flex;
+			          justify-content: space-evenly;
+			          position: absolute;
+					  top:600px;
+					  left: 590px;
+					  color: white;
+					  font-weight: 400;
+					  font-size: 14px;
+			          font-family: 'Inter', sans-serif;
+			              }
+		    .carbut1 { margin: 0px 10px; }
+		    .carbut11 { height: 4px;
+			            width: 130px;
+						margin-top: 10px;
+						background-color: white; }
+			.ag { text-align: center;
+			      margin: 30px 0px;
+				  }
+		    .ag img { border: 1px solid rgba(0,0,0,.08); }
+		    .most { margin: 10px 100px 0px; 
+			        padding: 20px 20px 25px 20px;  
+					border: 1px solid rgba(0,0,0,.05);
+					
+					top: 100px;
+					left: 500px;
+					   }
+			.mostname { display: flex;
+			             }
+			.mosthead { margin-top: 10px;
+			            font-weight: 500;
+						font-size: 25px;
+						font-family: 'Inter', sans-serif;
+						   }
+			.mostname h1 { margin-right: 50px; 
+						   margin-top: 25px;
+			               font-weight: 500;
+						   font-size: 17px;
+						   font-family: 'Inter', sans-serif;
+						   }
+		    .mostcar { display: flex; 
+			           justify-content: space-evenly;
+                        }			
+		    .ele { border: 1px solid rgba(0,0,0,.05);
+			       display: flex;
+				   flex-direction: column;
+				   margin-right: 15px;
+			        }
+			.nomargin { margin: 0px !important; }
+			.ele img { height: 194px;
+			           width: 295px;
+					   }
+		    .ele h1 { font-weight: 400;
+					 font-size: 16px;
+			   	     font-family: 'Roboto Condensed', sans-serif;
+					 margin: 10px 10px;
+						   }
+		    .ele h2 { margin: 0px 12px 20px;
+					  font-weight: 400;
+					  font-size: 20px;
+			   	      font-family: 'Roboto Condensed', sans-serif;
+              			}
+			.grey3 { color: rgb(0,0,0,.5);
+			         font-size: 12px;
+					 margin-left: 5px;
+					 text-align: right;
+					 }
+			.ele button { margin: 0px 12px 25px; 
+			              color: orange;
+						  border-color: orange;
+						  border-radius: 3px;
+						  background-color: white; 
+						  border-width: 1.2px;
+						  height: 35px;
+						  }
+		    .viewall { margin: 0px 100px 20px; 
+			        padding: 20px 20px 25px 20px;  
+					border: 1px solid rgba(0,0,0,.05);
+					font-weight: 500;
+					color: rgba(0,100,200,1);
+				    font-size: 15px;
+					font-family: 'Inter', sans-serif;
+					   }
+		    .main { display: relative; }
+		    .gtbut button { height: 50px;
+			         width: 50px;
+					 border-radius: 50%;
+					 position: absolute;
+					 top: 1050px;
+					 left: 1335px;
+					 background-color: white;
+					 border: 0.5px solid rgba(0,0,0,.07);
+					  }
+		</style>
+	</head>
+	<body>
+		<div class="header wow fadeInDown" data-wow-duration="2s" data-wow-delay=".2s"">
+			<div class="logo">
+				<img src="cardekhologo.svg" />
+			</div>
+			<div class="search">
+				<input type="text" / placeholder="    Search Cars eg. Honda Elevate">
+				<button><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="lang">
+				<span>English </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="heart">
+				<i class="fa fa-heart-o" aria-hidden="true"></i>
+			</div>
+			<div class="login">
+				<i class="fa fa-user-o" aria-hidden="true"></i><span>  Login/Register</span>
+			</div>
+		</div>
+		<style>
+			.new {
+				position:relative;
+			}
+			.newsubmenu:hover
+			{
+				display:block;
+			}
+			.newsubmenu
+			{
+				display:none;
+				background-color:white;
+				z-index:999;
+				color:red;
+				position:absolute;
+				top:100px;
+				left:100px;
+				border:1px solid red;
+			}
+			.new:hover + .newsubmenu{display:block;}
+		</style>
+		<div class="menu wow fadeInDown" data-wow-duration="2s" data-wow-delay=".2s"">
+			<div class="new">
+				<span>NEW CAR </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+				<div class="newsubmenu">
+					<ul>
+						<li> first menu 
+						</li>
+						<li> first menu 
+						</li>
+						<li> first menu 
+						</li>
+						<li> first menu 
+						</li>
+						<li> first menu 
+						</li>
+						<li> first menu 
+						</li>
+
+					</ul>
+				</div>
+			<div class="new">
+				<span>USED CAR </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="new">
+				<span>SELL CAR </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="new">
+				<span>CAR SERVICE </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="new">
+				<span>NEWS & REVIEWS </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="new">
+				<span>CARDEKHO VENTURES </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="new">
+				<span>MORE </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div class="loc">
+				<i class="fa fa-map-marker" aria-hidden="true"></i><span> Select City </span><i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div class="maruti wow slideInRight" data-wow-duration="2s" data-wow-delay=".2s"">
+			<div class="bgimg">
+				<img src="nexa.webp" />
+			</div>
+			<div class="form wow zoomIn" data-wow-duration="2s" data-wow-delay="2s">
+				<h1>Find your right car</h1>
+				<div class="formbut">
+					<button class="butblack">New Car</button>
+					<button>Used Car</button>
+				</div>
+				<div class="radio">
+					<label class="rad">
+						<input type="radio" name="by" />
+						<span>By Budget</span>
+					</label>
+					<label class="rad">
+						<input type="radio" name="by" />
+						<span>By Brand</span>
+					</label>
+				</div>
+				<div class="sel1">
+					<select class="select1">
+						<option class="grey2">Select Budget</option>
+						<option class="grey2">1 - 5 Lakh</option>
+						<option class="grey2">5 - 10 Lakh</option>
+						<option class="grey2">10 - 15 Lakh</option>
+						<option class="grey2">15 - 20 Lakh</option>
+						<option class="grey2">20 - 35 Lakh</option>
+						<option class="grey2">35 - 50 Lakh</option>
+						<option class="grey2">50 lakh - 1 Crore</option>
+						<option class="grey2">Above 1 Crore</option>
+					</select>
+				</div>
+				<div class="sel2">
+					<select class="select2">
+						<option class="grey2">All Vehicle Type</option>
+						<option class="grey2">Hatchback</option>
+						<option class="grey2">Sedan</option>
+						<option class="grey2">SUV</option>
+						<option class="grey2">MUV</option>
+						<option class="grey2">Luxcury</option>
+						<option class="grey2">Hybrid</option>
+						<option class="grey2">Cop</option>
+						<option class="grey2">Wagon</option>
+					</select>
+				</div>
+				<div class="sea">
+				 <button>SEARCH</button>
+			    </div>
+				<div class="adsea">
+					<span class="grey">Advance Search</span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="carbut">
+				<div class="carbut1">
+					Maruti Invitico
+					<div class="carbut11">
+					</div>
+				</div>
+				<div class="carbut1">
+					Maruti Invitico
+					<div class="carbut11">
+					</div>
+				</div>
+				<div class="carbut1">
+					Maruti Invitico
+					<div class="carbut11">
+					</div>
+				</div>
+				<div class="carbut1">
+					Maruti Invitico
+					<div class="carbut11">
+					</div>
+				</div>
+				<div class="carbut1">
+					Maruti Invitico
+					<div class="carbut11">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ag">
+			<img src="agoda.png" />
+		</div>
+		<div class="main">
+			<div class="most">
+				<div class="mosthead">
+					<h1>The most searched cars</h1>
+				</div>
+				<div class="mostname">
+					<h1>SUV</h1>
+					<h1>Hatchback</h1>
+					<h1>Sedan</h1>
+					<h1>MUV</h1>
+					<h1>Luxary</h1>
+				</div>
+				<hr>
+				<div class="mostcar">
+					<div class="ele">
+						<img src="elevate.jpg" />
+						<h1>Honda Elevate</h1>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i> 12 Lakh<sup>*</sup><span class="grey3">Estimated Price</span></h2>
+						<button class="elebut">Alert Me When Launched</button>
+					</div>
+					<div class="ele">
+						<img src="elevate.jpg" />
+						<h1>Honda Elevate</h1>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i> 12 Lakh<sup>*</sup><span class="grey3">Estimated Price</span></h2>
+						<button class="elebut">Alert Me When Launched</button>
+					</div>
+					<div class="ele">
+						<img src="elevate.jpg" />
+						<h1>Honda Elevate</h1>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i> 12 Lakh<sup>*</sup><span class="grey3">Estimated Price</span></h2>
+						<button class="elebut">Alert Me When Launched</button>
+					</div>
+					<div class="ele nomargin">
+						<img src="elevate.jpg" />
+						<h1>Honda Elevate</h1>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i> 12 Lakh<sup>*</sup><span class="grey3">Estimated Price</span></h2>
+						<button class="elebut">Alert Me When Launched</button>
+					</div>
+				</div>
+			</div>
+			<div class="viewall">
+				View All SUV Cars
+			</div>
+		</div>
+		<div class="gtbut">
+			<button>></button>
+		</div>
+	</body>
+</html>
